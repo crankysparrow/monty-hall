@@ -1,24 +1,33 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
 
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="wrap">
         <h1>Monty Hall Problem</h1>
 
         <div class="doors">
             <div class="door" id="door-1">
                 <div class="door-face">DOOR 1</div>
+                <div class="door-reveal-win"></div>
+                <div class="door-reveal-loss"></div>
             </div>
             <div class="door" id="door-2">
                 <div class="door-face">DOOR 2</div>
+                <div class="door-reveal-win"></div>
+                <div class="door-reveal-loss"></div>
             </div>
             <div class="door" id="door-3">
                 <div class="door-face">DOOR 3</div>
+                <div class="door-reveal-win"></div>
+                <div class="door-reveal-loss"></div>
             </div>
         </div>
 
@@ -34,6 +43,9 @@
             </div>
         </div>
 
-        <script src="doors.js"></script>
-    </body>
+    </div>
+
+    <script src="doors.js"></script>
+</body>
+
 </html>

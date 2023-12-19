@@ -25,9 +25,11 @@ let indRev = -1
 let goat = document.createElement('div')
 let car = document.createElement('div')
 goat.classList.add('behind')
+goat.classList.add('door-reveal-loss')
 car.classList.add('behind')
-goat.innerHTML = 'GOAT'
-car.innerHTML = 'CAR'
+car.classList.add('door-reveal-win')
+// goat.innerHTML = 'GOAT'
+// car.innerHTML = 'CAR'
 
 for (let i = 0; i < 3; i++) {
     let behind = behindDoors[i]
@@ -91,4 +93,5 @@ btnReveal.addEventListener('click', function () {
     } else {
         instructions.innerHTML = instructions.innerHTML + instText.revealGoat()
     }
+    switchReveal.classList.remove('show')
 })

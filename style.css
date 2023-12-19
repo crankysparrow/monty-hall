@@ -2,8 +2,9 @@ body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
         Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 10%;
+    padding: 10% 2rem;
     text-align: center;
+    font-size: 18px;
 }
 
 *,
@@ -12,15 +13,22 @@ body {
     box-sizing: border-box;
 }
 
+.wrap {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .doors {
     display: flex;
     justify-content: space-between;
-    height: 32vh;
+    height: 300px;
     margin-bottom: 100px;
+    max-width: 1000px;
 }
 
 .door {
-    width: 20%;
+    width: 29%;
     height: 30vh;
     border: 5px solid #0a0a0a;
     margin: 10px;
@@ -30,13 +38,25 @@ body {
     position: relative;
 }
 
-.door .behind {
-    display: none;
+.door-reveal-win,
+.door-reveal-loss {
     position: absolute;
-    bottom: 5vh;
-    text-align: center;
     width: 100%;
-    background: green;
+    height: 100%;
+    display: block;
+    background: #fff;
+    background-image: url('./assets/car.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.door-reveal-loss {
+    background-image: url('./assets/goat.jpg');
+    background-size: cover;
 }
 
 .door.chosen {
@@ -70,4 +90,8 @@ body {
 .switch.show,
 .switch-reveal.show {
     display: block;
+}
+
+button {
+    font-size: 1.2rem;
 }
